@@ -1,3 +1,14 @@
+export function renderLaCroix(array) {
+    const div = document.createElement('div');
+    div.classList.add('la-croix-flavors');
+
+    const p = document.createElement('p');
+    p.textContent = array;
+
+    div.append(p);
+    return div;
+}
+
 export function renderState(object) {
     const div = document.createElement('div');
     div.classList.add('states');

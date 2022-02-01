@@ -1,8 +1,19 @@
-// import functions and grab DOM elements
+import { laCroixFlavors } from './la-croix-data.js'; 
+import { states } from './states-data.js';
+import { renderLaCroix, renderState } from './utils.js';
 
-// let state
+const laCroixList = document.getElementById('la-croix-flavors');
+//console.log(laCroixFlavors);
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let flavor of laCroixFlavors) {
+    const div = renderLaCroix(flavor);
+    laCroixList.append(div);
+    //console.log(laCroixList);
+}
+
+const statesList = document.getElementById('states');
+
+for (let state of states) {
+    const div = renderState(state);
+    statesList.append(div);
+}
