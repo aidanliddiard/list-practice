@@ -27,7 +27,34 @@ export function renderState(object) {
     //tree
     const liTree = document.createElement('li');
     liTree.textContent = `Tree: ${object.Tree}`;
+    ul.append(liFlower, liAnimal, liFruit, liTree);
+    div.append(h3, ul);
+    return div;
+}
 
-    div.append(h3, ul, liFlower, liAnimal, liFruit, liTree);
+export function renderPizza(type) {
+    const div = document.createElement('div');
+    div.classList.add('pizzas');
+    const h3 = document.createElement('h3');
+    h3.textContent = type.name;
+    const p = document.createElement('p');
+
+    const toppings = type.toppings;
+    let output = '';
+
+    for (var i = 0; i < toppings.length; i++) {
+        if (i === 0) {
+            output = `${toppings[i]}`;
+        }
+        else if (i === (toppings.length - 1)) {
+            output = `${output}, and ${toppings[i]}`;
+        }
+        else {
+            output = `${output}, ${toppings[i]}`;
+        }
+    }
+    p.textContent = `${type.name} pizza has ${type.sauce} sauce and ${output} toppings.`;
+
+    div.append(h3, p);
     return div;
 }
