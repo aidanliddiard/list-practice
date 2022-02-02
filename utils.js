@@ -32,6 +32,25 @@ export function renderState(object) {
     return div;
 }
 
+export function renderCountries(object) {
+    const div = document.createElement('div');
+    div.classList.add('countries');
+    const img = document.createElement('img');
+    img.src = object.img;
+    const h3 = document.createElement('h3');
+    h3.textContent = `${object.name} Facts`;
+    const ul = document.createElement('ul');
+    const liPopulation = document.createElement('li');
+    liPopulation.textContent = `Population: ${object.facts.population}`;
+    const liCapital = document.createElement('li');
+    liCapital.textContent = `Capital: ${object.facts.capital}`;
+    const liFact = document.createElement('li');
+    liFact.textContent = `Fun Fact: ${object.facts.fact}`;
+    ul.append(liPopulation, liCapital, liFact);
+    div.append(img, h3, ul);
+    return div;
+}
+
 export function renderPizza(type) {
     const div = document.createElement('div');
     div.classList.add('pizzas');

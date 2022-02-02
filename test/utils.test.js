@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-import { renderLaCroix, renderState, renderPizza } from '../utils.js';
+import { renderLaCroix, renderState, renderPizza, renderCountries } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -32,6 +32,28 @@ test('testing state function', (expect) => {
         flower: 'Oregon-grape',
         Fruit: 'Pear',
         Tree: 'Douglas-fir',
+    });
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
+
+test('testing countries function', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = '<div class="countries"><img src="icons8-australia-96.png"><h3>Australia Facts</h3><ul><li>Population: 25.69 million</li><li>Capital: Canberra</li><li>Fun Fact: If you were to visit one new beach in Australia every day, it would take more than 27 years to see them all.</li></ul></div>';
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = renderCountries({
+        name: 'Australia',
+        img: 'icons8-australia-96.png',
+        facts: {
+            population: '25.69 million',
+            capital: 'Canberra',
+            fact: 'If you were to visit one new beach in Australia every day, it would take more than 27 years to see them all.',
+        },
     });
 
     //Expect
