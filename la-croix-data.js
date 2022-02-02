@@ -1,0 +1,1 @@
+export const laCroixFlavors = ['Lime', 'Mango', 'Berry', 'Tangerine', 'Cran-Raspberry', 'LimonCello'];
