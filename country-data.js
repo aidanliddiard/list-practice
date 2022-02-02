@@ -1,7 +1,7 @@
 export const countries = [
     {
         name: 'Australia',
-        img: 'icons8-australia-96.png',
+        img: '/assets/icons8-australia-96.png',
         facts: {
             population: '25.69 million',
             capital: 'Canberra',
@@ -10,7 +10,7 @@ export const countries = [
     },
     {
         name: 'Botswana',
-        img: 'icons8-botswana-96.png',
+        img: '/assets/icons8-botswana-96.png',
         facts: {
             population: '2.35 million',
             capital: 'Gaborone',
@@ -19,7 +19,7 @@ export const countries = [
     },
     {
         name: 'Mexico',
-        img: 'icons8-mexico-96.png',
+        img: '/assets/icons8-mexico-96.png',
         facts: {
             population: '128.9 million',
             capital: 'Mexico City',
@@ -28,7 +28,7 @@ export const countries = [
     },
     {
         name: 'Thailand',
-        img: 'icons8-thailand-96.png',
+        img: '/assets/icons8-thailand-96.png',
         facts: {
             population: '69.8 million',
             capital: 'Bangkok',

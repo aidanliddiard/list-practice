@@ -42,13 +42,13 @@ test('testing state function', (expect) => {
 test('testing countries function', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<div class="countries"><img src="icons8-australia-96.png"><h3>Australia Facts</h3><ul><li>Population: 25.69 million</li><li>Capital: Canberra</li><li>Fun Fact: If you were to visit one new beach in Australia every day, it would take more than 27 years to see them all.</li></ul></div>';
+    const expected = '<div class="countries"><img src="/assets/icons8-australia-96.png"><h3>Australia Facts</h3><ul><li>Population: 25.69 million</li><li>Capital: Canberra</li><li>Fun Fact: If you were to visit one new beach in Australia every day, it would take more than 27 years to see them all.</li></ul></div>';
 
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderCountries({
         name: 'Australia',
-        img: 'icons8-australia-96.png',
+        img: '/assets/icons8-australia-96.png',
         facts: {
             population: '25.69 million',
             capital: 'Canberra',
